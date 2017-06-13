@@ -57,13 +57,13 @@ namespace DecisionTreeIA
                     Value currentValue = currentProcessedAttribute.values.First(v => v.Name == value);
                     if (tree[AttributesName.Count].values[index] == "T")
                     {
-                        currentValue.possitiveValue += 1;
+                        currentValue.PossitiveValue += 1;
                     }
                     else
                     {
-                        currentValue.negativeValue += 1;
+                        currentValue.NegativeValue += 1;
                     }
-                    currentValue.allValues++;
+                    currentValue.AllValues++;
                 }
             }
             return ProcesedAttributes;

@@ -18,8 +18,8 @@ namespace DecisionTreeIA
         {
             Tree = tree;
             // calculate the entropy of the target
-            int posValTarget = procesedAttributes.Last().values.First().possitiveValue;
-            int negValTarget = procesedAttributes.Last().values.Last().negativeValue;
+            int posValTarget = procesedAttributes.Last().values.First().PossitiveValue;
+            int negValTarget = procesedAttributes.Last().values.Last().NegativeValue;
 
             double targetEntropy = ComputeEntropy(posValTarget, negValTarget);
 
@@ -146,7 +146,7 @@ namespace DecisionTreeIA
             {
                 foreach (var attributeValue in node.Attribute.values)
                 {
-                    if (attributeValue.possitiveValue > 0 && attributeValue.negativeValue == 0)
+                    if (attributeValue.PossitiveValue > 0 && attributeValue.NegativeValue == 0)
                     {
                         node.Children.Add(new Node
                         {
@@ -157,7 +157,7 @@ namespace DecisionTreeIA
                             Children = null
                         });
                     }
-                    else if (attributeValue.possitiveValue == 0 && attributeValue.negativeValue > 0)
+                    else if (attributeValue.PossitiveValue == 0 && attributeValue.NegativeValue > 0)
                     {
                         node.Children.Add(new Node
                         {
@@ -359,8 +359,8 @@ namespace DecisionTreeIA
 
             foreach (var item in attribute.values)
             {
-                probability = ((double)(item.possitiveValue + item.negativeValue) / (double)(target.values[0].possitiveValue + target.values[1].negativeValue));
-                result = result + (probability * ComputeEntropy(item.possitiveValue, item.negativeValue));
+                probability = ((double)(item.PossitiveValue + item.NegativeValue) / (double)(target.values[0].PossitiveValue + target.values[1].NegativeValue));
+                result = result + (probability * ComputeEntropy(item.PossitiveValue, item.NegativeValue));
             }
             return result;
         }

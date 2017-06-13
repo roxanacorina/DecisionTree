@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace DecisionTreeIA
 {
-    public class Value //Label
+    public class Value
     {
         public string Name { get; set; }
-        public int possitiveValue { get; set; }
-        public int negativeValue { get; set; }
-        public int allValues;
+        public int PossitiveValue { get; set; }
+        public int NegativeValue { get; set; }
+        public int AllValues;
         public Value()
         {
-            possitiveValue = 0;
-            negativeValue = 0;
-            allValues = 0;
+            PossitiveValue = 0;
+            NegativeValue = 0;
+            AllValues = 0;
         }
     }
 }
