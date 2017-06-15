@@ -1,7 +1,5 @@
 My first commit to your project
 ok
-<<<<<<< HEAD
 un commit alin
-=======
 jhadgjsgdkjsag
->>>>>>> 8c6f1a2b9f759639aefa6068f43f1d29e7df6276
+
