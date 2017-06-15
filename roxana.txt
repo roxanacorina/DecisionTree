@@ -1,1 +1,6 @@
-Am scris ceva nou in fisierul Roxana
+in primul rand din ce ai scris e clar ca nu stii cum functioneaza git. Tu ai branch-ul master. Daca faci modificari, creezi un alt branch si le faci acolo. Daca eu vreau sa fac modificari, tot din master fac alt branch. Dupa ce termin fac merge cu master si atunci se intampla fenomenul "fast-forward". Daca lucram amandoi pe master atunci merge-ul se face "recursive" si intampini probleme.
+Andrei Ionescu
+Andrei
+daca faci cum am zis in prima parte nu vei avea probleme de conflicte
+sau daca le ai, nu sunt grave
+http://alblue.bandlem.com/2011/10/git-tip-of-week-merging-revisited.html
